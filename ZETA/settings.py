@@ -80,10 +80,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
         'NAME':'ZETA',
-        'USER' : 'root',
+        'USER' : 'JohnJones001',
         'PASSWORD' : '49012cook',
-        'HOST' : 'localhost',
-        'PORT' : 3306 
+        'HOST' : 'JohnJones001.mysql.pythonanywhere-services.com',
     }
 }
 
