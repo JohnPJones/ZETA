@@ -20,3 +20,9 @@ class SalesPersonModel(models.Model):
     class Meta:
         verbose_name =  'SALESPERSON'
         verbose_name_plural = 'SALESPERSON(s)'
+
+class CustomerTypeModel(models.Model):
+    CUS_TYPE_MDL = models.CharField(max_length = 25)
+    class Meta:
+        verbose_name = 'CUSTOMER TYPE'
+        verbose_name_plural = "CUSTOMER TYPES"

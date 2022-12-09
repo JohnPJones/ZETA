@@ -25,4 +25,4 @@ def CustomerInput(request):
             cus_model.save()
     form = CreateCustomerForm()
     context = {'form':form}
-    return render(request,'Customer/CreateCustomerPage.html')
+    return render(request,'Customer/CreateCustomerPage.html',context)
