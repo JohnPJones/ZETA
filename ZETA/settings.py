@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'MAIN.apps.MainConfig',
-    'CUSTOMERINPUT.apps.CustomerinputConfig'
+    'CUSTOMER.apps.CustomerConfig'
 ]
 
 MIDDLEWARE = [
@@ -80,9 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
         'NAME':'ZETA',
-        'USER' : 'JohnJones001',
+        'USER' : 'root',
         'PASSWORD' : '49012cook',
-        'HOST' : 'JohnJones001.mysql.pythonanywhere-services.com',
+        'HOST' : 'localhost',
+        'PORT' : 3306
     }
 }
 
