@@ -2,13 +2,20 @@
 
 {% block content %}
 
-
-<form action="{% url 'CreateCustomer' %}" method = 'POST'>
-    {% csrf_token %}
-    {{ form.as_p }}
-
-    <button type="submit" >SAVE</button>
-</form>
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Create Your Customer into Database</h1>
+      </div>
+      
+      <form action="{% url 'CreateCustomer' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">SAVE</button>
+      </form>
+      
+    </div>
+</section>
 
 
 {% endblock %}

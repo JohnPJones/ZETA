@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from CUSTOMER.forms import CreateCustomerForm
-from CUSTOMER.models import CustomerInputModel
+from .forms import CreateCustomerForm
+from .models import CustomerInputModel
 
 # Create your views here.
 
@@ -9,8 +9,11 @@ def Customer(request):
 
 def CustomerInput(request):
     if request.method == 'POST':
+        print(request.mothod)
         form = CreateCustomerForm(request.POST)
+        print(form)
         if form.is_valid():
+            print(form.is_valid())
             data = form.cleaned_data
             cus_model = CustomerInputModel()
 
@@ -22,4 +25,4 @@ def CustomerInput(request):
             cus_model.save()
     form = CreateCustomerForm()
     context = {'form':form}
-    return render(request,'Customer/CreateCustomerPage.html',context)
+    return render(request,'Customer/CreateCustomerPage.html')
