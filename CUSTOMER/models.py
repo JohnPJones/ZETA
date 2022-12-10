@@ -9,7 +9,7 @@ Lotus_Salary_Base_Choices = (
 class CustomerInputModel(models.Model):
     CUS_CV_MDL = models.IntegerField()
     CUS_NAM_MDL = models.CharField(max_length = 60)
-    CUS_TYP_MDL = models.CharField(max_length = 25)
+    CUS_TYP_MDL = models.CharField(max_length = 50)
     BUS_NAM_MDL = models.CharField(max_length = 50)
     SAL_NAM_MDL = models.CharField(max_length = 50)
 

@@ -9,17 +9,14 @@ def Customer(request):
 
 def CustomerInput(request):
     if request.method == 'POST':
-        print(request.mothod)
         form = CreateCustomerForm(request.POST)
-        print(form)
         if form.is_valid():
-            print(form.is_valid())
             data = form.cleaned_data
             cus_model = CustomerInputModel()
 
             cus_model.CUS_CV_MDL = data['CUS_CV_FORM']
             cus_model.CUS_NAM_MDL = data['CUS_NAM_FORM']
-            cus_model.CUS_TYP_MDL = data['CUS_TYP_FORM']
+            cus_model.CUS_TYP_MDL = data['CUS_TYP_FORM'].CUS_TYPE_MDL
             cus_model.BUS_NAM_MDL = data['BUS_NAM_FORM']
             cus_model.SAL_NAM_MDL = data['SAL_NAM_FORM'].SAL_NAM_MDL
             cus_model.save()

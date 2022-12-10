@@ -1,19 +1,6 @@
 from django import forms
 from CUSTOMER.models import SalesPersonModel,CustomerTypeModel
 
-TYP_CUS = (
-    ('RESTUARANT','Restuarant'),
-    ('HOTEL','Hotel'),
-    ('CATERING','Catering'),
-    # ('HOSPITAL,Hospital'),
-    # ('SCHOOL','School'),
-    # ('MINIMART','Minimart'),
-    # ('INDUSTRY','Industry'),
-    # ('RAN-NEE-KAI-DEE','Ran-Nee-Kai-Dee'),
-    # ('FRESH SHOP','Fresh Shop'),
-    ('OTHER','Other')
-)
-
 class SalesPersonChoiceField(forms.ModelChoiceField):
     def label_from_instance(self,obj):
         return obj.SAL_NAM_MDL
